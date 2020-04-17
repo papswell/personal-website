@@ -1,0 +1,61 @@
+# Files that are excluded from the monorepo
+#
+# For more about ignoring files, see :
+# - https://help.github.com/articles/ignoring-files/ 
+# - https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# ------------------------------------------------------------------------------
+# General
+# ------------------------------------------------------------------------------
+
+# misc
+.DS_Store
+.~lock.*
+**/.~lock.*
+.vagrant
+.grunt
+.npm
+.node_repl_history
+*.tgz
+.eslintcache
+.next
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+lupaProject.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dependencies
+node_modules
+**/node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+lib-cov
+
+# production
+build
+
+# Environnement files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
