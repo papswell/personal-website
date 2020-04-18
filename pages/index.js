@@ -1,14 +1,35 @@
 import Link from "next/link";
-import CenteredLayout from "../components/layouts/CenteredLayout";
+import FullScreen from "../components/layouts/FullScreen";
+import Footer from "../components/footer";
 
 export default function Index() {
   return (
-    <CenteredLayout>
-      <p>Hi ! This website is not ready yet, come back later :)</p>
+    <FullScreen className="page">
+      <main>
+        <div className="content">
+          <h1>
+            Hi, I am <strong>Pierre</strong>.
+          </h1>
 
-      {/* <Link href="/about">
-        <a title="About Page">About Page</a>
-      </Link> */}
-    </CenteredLayout>
+          <p>
+            I can{" "}
+            <span className="typewritter">
+              audit, design, code, test, deploy, and manage
+            </span>{" "}
+            a project <em>for you&nbsp;…</em>
+          </p>
+
+          <p>
+            But I{" "}
+            <span className="typewritter">
+              <strong>develop</strong>
+            </span>{" "}
+            <em>with you</em> :)
+          </p>
+        </div>
+      </main>
+
+      <Footer />
+    </FullScreen>
   );
 }
