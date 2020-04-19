@@ -1,14 +1,12 @@
 import Footer from "../footer";
 import Header from "../header";
 
-const FullScreen = ({ children, className, ...props }) => {
+const FullScreen = ({ children, ...props }) => {
   return (
-    <div className={className}>
+    <div {...props}>
       <Header />
 
-      <main className="container" {...props}>
-        {children}
-      </main>
+      {children}
 
       <Footer />
 
