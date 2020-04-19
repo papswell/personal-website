@@ -83,7 +83,7 @@ export default function Index() {
             {step === "complete" && (
               <div className="link-container fadeIn" style={{ marginTop: 64 }}>
                 <Link href="/about">
-                  <a>
+                  <a className="button">
                     <span>What can we do together ?</span>
                   </a>
                 </Link>

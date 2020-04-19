@@ -52,7 +52,7 @@ export default function About() {
       {/* <p>This list is not exhaustive, so</p> */}
 
       <div className="link-container" style={{ alignSelf: "center" }}>
-        <a href="mailto:contact@pierreguillau.me">
+        <a href="mailto:contact@pierreguillau.me" className="button">
           <span>Let's talk about your project !</span>
         </a>
       </div>
