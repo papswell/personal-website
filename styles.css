@@ -1,18 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 
 body {
   margin: 0;
   font-size: 21px;
   line-height: 1.4;
-}
-
-@media screen and (min-width: 768px) {
-
-  main {
-    font-size: 28px;
-  }
 }
 
 .page {
@@ -28,16 +24,33 @@ body {
 }
 
 .content {
+  min-width: 100%;
   margin-top: -10%;
 }
 
-
 footer {
   text-align: center;
-  /* padding: 24px; */
 }
 
-.strong {
+.h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.strong  {
   font-size: 21px;
   font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  main {
+    font-size: 28px;
+  }
+
+  .content {
+    min-width: 360px;
+    max-width: 590px;
+  }
 }
