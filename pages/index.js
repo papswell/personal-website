@@ -3,17 +3,29 @@ import FullScreen from "../components/layouts/FullScreen";
 import Footer from "../components/footer";
 
 import TypeIt from "typeit-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Index() {
-  const [run, makeRun] = useState(true);
+  const [step, setStep] = useState("init");
+
+  useEffect(() => {
+    if (step === "init") {
+      setStep("run");
+    }
+  }, []);
+
   return (
     <FullScreen className="page">
       <main>
         <div className="content">
-          {run ? (
+          {step === "run" ? (
             <TypeIt
               element={"div"}
+              options={{
+                afterComplete: () => {
+                  setStep("complete");
+                },
+              }}
               getBeforeInit={(instance) => {
                 instance
                   .type('<span class="h1">Hi, I\'m Pierre.</span><br><br>')
@@ -55,7 +67,7 @@ export default function Index() {
               }}
             ></TypeIt>
           ) : (
-            <>
+            <div style={{ opacity: step === "init" ? 0 : 1 }}>
               <h1>Hi, I'm Pierre.</h1>
 
               <p>
@@ -69,7 +81,23 @@ export default function Index() {
                 But i <strong>develop</strong> <em>with</em> you{" "}
                 <strong>:)</strong>
               </p>
-            </>
+
+              {step === "complete" && (
+                <div className="link-container">
+                  <Link href="/about">
+                    <a>
+                      <span>What can we do together ?</span>
+                    </a>
+                  </Link>
+
+                  {/* <Link href="/about">
+                    <a>
+                      <span>Get in touch</span>
+                    </a>
+                  </Link> */}
+                </div>
+              )}
+            </div>
           )}
         </div>
       </main>

@@ -12,7 +12,7 @@ body {
 }
 
 .page {
-  padding: 32px;
+  padding: 12px 36px;
 }
 
 .page main {
@@ -28,10 +28,6 @@ body {
   margin-top: -10%;
 }
 
-footer {
-  text-align: center;
-}
-
 .h1 {
   font-size: 2em;
   font-weight: bold;
@@ -42,6 +38,10 @@ footer {
   font-weight: bold;
 }
 
+p + p {
+  margin-top: 32px;
+}
+
 
 @media screen and (min-width: 768px) {
 
@@ -50,7 +50,120 @@ footer {
   }
 
   .content {
-    min-width: 360px;
-    max-width: 590px;
+    min-width: 380px;
+    max-width: 640px;
   }
+}
+
+.link-container {
+
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  opacity: 0;
+
+  animation: fadeIn 1s ease 1s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  
+  to {
+    opacity: 1;
+    max-height: 100px;
+  }
+}
+
+
+.link-container a {
+
+  display: flex;
+  align-items: stretch;
+
+  color: #000;
+  text-decoration: none;
+
+  display: block;
+  position: relative;
+
+  padding: 1px;
+  /* background-color: #fff; */
+}
+
+
+.link-container a span {
+  display: block;
+  padding: 16px 32px;
+  background-color: #fff;
+
+  text-align: center;
+  word-wrap: nowrap;
+}
+
+.link-container a::before {
+  top: 0;
+}
+
+.link-container a::after {
+  bottom: 0;
+}
+
+.link-container a::before,
+.link-container a::after {
+
+  content: '';
+  
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+
+  transition: width 0.3s ease-in 0.3s,
+    left 0.3s ease-in 0.3s,
+    height 0.3s ease-in;
+}
+
+
+.link-container a:hover::before,
+.link-container a:hover::after {
+
+  height: 50%;
+  width: 100%;
+  left: 0;
+
+  transition: width 0.3s ease-in,
+    left 0.3s ease-in,
+    height 0.3s ease-in 0.3s;
+}
+
+
+
+footer {
+  text-align: center;
+  font-size: 14px;
+}
+
+.icon-links  {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.icon-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+.made span + span::before {
+  content: ' - '
 }
