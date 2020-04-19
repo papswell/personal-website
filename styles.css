@@ -7,20 +7,33 @@
 
 body {
   margin: 0;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.4;
 }
 
+p {
+  margin: 8px 0;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 22px;
+}
 .page {
   padding: 12px 36px;
+}
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 .page main {
   flex: 1;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .content {
@@ -33,36 +46,37 @@ body {
   font-weight: bold;
 }
 
-.strong  {
-  font-size: 21px;
-  font-weight: bold;
-}
-
-p + p {
-  margin-top: 32px;
-}
 
 
 @media screen and (min-width: 768px) {
 
-  main {
-    font-size: 28px;
+  body {
+    font-size: 21px;
   }
 
   .content {
+    font-size: 28px;
     min-width: 380px;
     max-width: 640px;
+  }
+
+
+  .content p + p {
+    margin-top: 32px;
   }
 }
 
 .link-container {
 
-  margin-top: 64px;
+  margin: 32px 0;
   display: flex;
   justify-content: space-between;
   justify-content: center;
-  opacity: 0;
+  
+}
 
+.fadeIn {
+  opacity: 0;
   animation: fadeIn 1s ease 1s both;
 }
 

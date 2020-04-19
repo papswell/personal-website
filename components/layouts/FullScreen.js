@@ -1,7 +1,13 @@
-const FullScreen = ({ children, ...props }) => {
+import Footer from "../footer";
+
+const FullScreen = ({ children, className, ...props }) => {
   return (
-    <div {...props}>
-      {children}
+    <div className={className}>
+      <main className="container" {...props}>
+        {children}
+      </main>
+
+      <Footer />
 
       <style jsx>
         {`
