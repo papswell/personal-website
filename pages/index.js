@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FullScreen from "../components/layouts/FullScreen";
 import Footer from "../components/footer";
+import Typewritter from "../components/typewritter";
 
 export default function Index() {
   return (
@@ -8,22 +9,22 @@ export default function Index() {
       <main>
         <div className="content">
           <h1>
-            Hi, I am <strong>Pierre</strong>.
+            <Typewritter speed={100}>Hi, I am Pierre.</Typewritter>
           </h1>
 
           <p>
             I can{" "}
-            <span className="typewritter">
+            <Typewritter speed={100} delay={3000} className="strong">
               audit, design, code, test, deploy, and manage
-            </span>{" "}
-            a project <em>for you&nbsp;…</em>
+            </Typewritter>
+            <br />a project <em>for you&nbsp;…</em>
           </p>
 
           <p>
             But I{" "}
-            <span className="typewritter">
-              <strong>develop</strong>
-            </span>{" "}
+            <Typewritter speed={100} delay={6000} className="strong">
+              develop
+            </Typewritter>
             <em>with you</em> :)
           </p>
         </div>

@@ -36,3 +36,8 @@ footer {
   text-align: center;
   /* padding: 24px; */
 }
+
+.strong {
+  font-size: 21px;
+  font-weight: bold;
+}
