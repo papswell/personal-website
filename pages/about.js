@@ -2,7 +2,7 @@ import FullScreen from "../components/layouts/FullScreen";
 
 export default function About() {
   return (
-    <FullScreen className="page">
+    <FullScreen className="page" title="Pierre Guillaume | A propos">
       <main
         className="container"
         style={{ alignItems: "stretch", flexDirection: "column" }}

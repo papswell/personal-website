@@ -14,7 +14,10 @@ export default function Index() {
   }, []);
 
   return (
-    <FullScreen className="page">
+    <FullScreen
+      className="page"
+      title="Pierre Guillaume | Développeur web à Bordeaux"
+    >
       <main style={{ alignItems: "center" }}>
         <div className="content">
           {step === "run" ? (

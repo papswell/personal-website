@@ -3,10 +3,11 @@ import Header from "../header";
 
 import Head from "next/head";
 
-const FullScreen = ({ children, ...props }) => {
+const FullScreen = ({ children, title, ...props }) => {
   return (
     <div {...props}>
       <Head>
+        <title>{title}</title>
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
