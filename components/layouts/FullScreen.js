@@ -1,6 +1,6 @@
 import Footer from "../footer";
 import Header from "../header";
-
+import RGPD from "../rgpd-modal";
 import Head from "next/head";
 
 const FullScreen = ({ children, title, ...props }) => {
@@ -27,6 +27,8 @@ const FullScreen = ({ children, title, ...props }) => {
       {children}
 
       <Footer />
+
+      <RGPD />
 
       <style jsx>
         {`

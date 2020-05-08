@@ -120,7 +120,8 @@ ul {
   position: relative;
 
   padding: 1px;
-  /* background-color: #fff; */
+  background: none;
+  border: none;
 }
 
 
@@ -253,4 +254,41 @@ header > div:last-child {
   background-color: #000;
 
   border-radius: 50%;
+}
+
+
+
+.rgpd {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  left: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  border: solid 1px black;
+
+  background-color: rgba(255, 255,255, 0.8);
+  backdrop-filter: blur(3px);
+
+  font-size: 12px;
+}
+
+.rgpd div:first-child {
+  flex:1
+}
+.rgpd div {
+  display: flex;
+}
+
+.rgpd .button {
+  margin: 0 8px;
+}
+.rgpd span {
+  padding: 8px 12px;
+  
+  cursor: pointer;
 }
