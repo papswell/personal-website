@@ -3,6 +3,8 @@ import { get, set, clear } from "./../../utils/cookies";
 import RGPD from "../rgpd-modal";
 import Head from "next/head";
 
+const __PROD__ = process.env.NODE_ENV === "production";
+
 const ACCEPT_VALUE = "1";
 
 const Page = ({ children, title, description }) => {
@@ -23,7 +25,7 @@ const Page = ({ children, title, description }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
 
-        {insertGA && (
+        {__PROD__ && insertGA && (
           <script
             dangerouslySetInnerHTML={{
               __html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
