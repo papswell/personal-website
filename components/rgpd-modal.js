@@ -1,30 +1,5 @@
-import { useEffect, useState } from "react";
-
-import { get, set, clear } from "../utils/cookies";
-
-const ACCEPT_VALUE = "1";
-
-const RGPDModal = () => {
-  const [shouldPrompt, updateShouldPrompt] = useState(true);
-
-  useEffect(() => {
-    const accept = get("accept_cookies");
-    if (accept === ACCEPT_VALUE) {
-      updateShouldPrompt(false);
-    }
-  }, []);
-
-  const decline = () => {
-    clear();
-    updateShouldPrompt(false);
-  };
-
-  const handleAccept = () => {
-    set("accept_cookies", ACCEPT_VALUE);
-    updateShouldPrompt(false);
-  };
-
-  if (!shouldPrompt) {
+const RGPDModal = ({ isOpen, onAccept, onDecline }) => {
+  if (!isOpen) {
     return null;
   }
 
@@ -35,10 +10,10 @@ const RGPDModal = () => {
         agree ?
       </div>
       <div>
-        <button className="button" onClick={decline}>
+        <button className="button" onClick={onDecline}>
           <span>No</span>
         </button>
-        <button className="button" onClick={handleAccept}>
+        <button className="button" onClick={onAccept}>
           <span>Yes</span>
         </button>
       </div>
