@@ -15,7 +15,10 @@ export default function Index() {
   }, []);
 
   return (
-    <Page title="Pierre Guillaume | Développeur web à Bordeaux">
+    <Page
+      title="Pierre Guillaume | Mobile/Web developer in Bordeaux"
+      description="I can help you to develop your web/mobile project. I mainly work with NodeJS and React, but i can work with PHP, Symfony, Docker, Android, and more ..."
+    >
       <FullScreen className="page">
         <main style={{ alignItems: "center" }}>
           <div className="content">

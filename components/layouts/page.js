@@ -21,6 +21,7 @@ const Page = ({ children, title, description }) => {
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
 
         {insertGA && (
           <script

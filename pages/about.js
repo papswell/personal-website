@@ -3,7 +3,10 @@ import Page from "../components/layouts/page";
 
 export default function About() {
   return (
-    <Page title="Pierre Guillaume | A propos">
+    <Page
+      title="Working together | Pierre Guillaume"
+      description="Web / mobile developer in Bordeaux, I can develop projects using NodeJS, React, PHP, Symfony, Docker, Android, Wordpress and much more!"
+    >
       <FullScreen className="page">
         <main
           className="container"
